@@ -65,7 +65,7 @@ func _fleuron(at: Vector2) -> void:
 	draw_circle(at, 3.5, ParchmentView.GILT)
 
 
-## A flat inked button; pointing hands appear on either side while it is chosen.
+## A flat inked button: chosen, its lettering turns red and a hand-drawn underline appears.
 class InkEntry:
 	extends Button
 
@@ -82,8 +82,12 @@ class InkEntry:
 		var font_size: int = get_theme_font_size("font_size")
 		var width: float = font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x
 		var baseline: float = size.y / 2.0 + font_size * 0.32
-		for side: float in [-1.0, 1.0]:
-			var hand: String = "☞" if side < 0 else "☜"
-			var hand_width: float = font.get_string_size(hand, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x
-			var x: float = size.x / 2.0 + side * (width / 2.0 + 14.0) - (hand_width if side < 0 else 0.0)
-			draw_string(font, Vector2(x, baseline), hand, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, ParchmentView.RUBRIC)
+		var y: float = baseline + maxf(3.0, font_size * 0.14)
+		var left: float = size.x / 2.0 - width / 2.0
+		# A slightly uneven pen stroke, thicker in the middle, with a finer second line.
+		var points := PackedVector2Array()
+		for step: int in range(13):
+			var t: float = step / 12.0
+			points.append(Vector2(left - 2.0 + (width + 4.0) * t, y + sin(t * 9.0) * 0.6))
+		draw_polyline(points, ParchmentView.RUBRIC, maxf(1.5, font_size * 0.07), true)
+		draw_line(Vector2(left + width * 0.15, y + font_size * 0.12), Vector2(left + width * 0.85, y + font_size * 0.12), Color(ParchmentView.RUBRIC, 0.45), 1.0, true)

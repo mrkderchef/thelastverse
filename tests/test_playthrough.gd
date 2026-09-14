@@ -52,7 +52,8 @@ func _run() -> void:
 	_expect(game.room.player.enabled and not paused, "Closing the book begins the study")
 	_expect(game.act_card != null and is_instance_valid(game.act_card), "The act title appears on screen")
 	await _frames(3)
-	for label: Label in [game.chapter_label, game.objective, game.letters, game.caption, game.prompt, game.holding, game.save_status]:
+	# The act name sits top-left and the save note bottom-right; the rest share the centre.
+	for label: Label in [game.objective, game.letters, game.caption, game.prompt, game.holding]:
 		_expect(label.horizontal_alignment == HORIZONTAL_ALIGNMENT_CENTER and absf(label.get_global_rect().get_center().x - root.get_visible_rect().size.x * 0.5) < 1.5, "HUD label is centered: " + str(label.text))
 	var floating: Array[String] = []
 	for node: Node in game.room.find_children("*", "Label3D", true, false):
@@ -652,7 +653,9 @@ func _button(key: String) -> Button:
 	var wanted: String = TranslationServer.translate(key)
 	for node: Node in game.overlay.find_children("*", "Button", true, false):
 		var button := node as Button
-		if button.text == wanted and not button.disabled and button.is_visible_in_tree() and not button.is_queued_for_deletion():
+		# Entries may carry arrows or a key reminder ("Lay It Down   ·   ESC").
+		var label: String = button.text.get_slice("   ·   ", 0).replace("→", "").replace("←", "").strip_edges()
+		if label == wanted and not button.disabled and button.is_visible_in_tree() and not button.is_queued_for_deletion():
 			return button
 	return null
 

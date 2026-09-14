@@ -68,9 +68,9 @@ func _ready() -> void:
 	actions.alignment = BoxContainer.ALIGNMENT_CENTER
 	actions.add_theme_constant_override("separation", 40)
 	column.add_child(actions)
-	actions.add_child(TitlePage.entry("Blot out the route", _clear, 19))
-	actions.add_child(TitlePage.entry("File the report", _report, 21))
-	actions.add_child(TitlePage.entry("Fold the plan", func() -> void: closed.emit(), 19))
+	actions.add_child(TitlePage.entry("Blot Out the Route", _clear, 19))
+	actions.add_child(TitlePage.entry("File the Report", _report, 21))
+	actions.add_child(TitlePage.entry("Fold the Plan", func() -> void: closed.emit(), 19))
 	_describe()
 
 

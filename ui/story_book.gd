@@ -42,7 +42,7 @@ func _ready() -> void:
 			places.append(tr("LANDMARK_" + key))
 		places.sort()
 		body += "\n\nSeen so far (in no order): " + (", ".join(places) if not places.is_empty() else "none yet")
-	close_label = "Close the book"
+	close_label = "Close the Book"
 	super._ready()
 	var navigation := HBoxContainer.new()
 	navigation.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -50,7 +50,7 @@ func _ready() -> void:
 	close_button.get_parent().add_child(navigation)
 	close_button.get_parent().move_child(navigation, close_button.get_index())
 	for step: int in [-1, 1]:
-		var button: Button = TitlePage.entry("‹ previous leaf" if step < 0 else "next leaf ›", _turn.bind(step), 19)
+		var button: Button = TitlePage.entry("‹ Previous Leaf" if step < 0 else "Next Leaf ›", _turn.bind(step), 19)
 		button.add_theme_color_override("font_color", Color("d9c49a"))
 		for state_name: String in ["font_hover_color", "font_focus_color"]:
 			button.add_theme_color_override(state_name, Color("fff1cf"))

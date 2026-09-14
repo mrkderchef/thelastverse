@@ -28,19 +28,19 @@ NEW_RUN,Begin Anew
 SETTINGS,Settings
 QUIT,Close the Volume
 BACK,Back
-CANCEL,Keep my progress
-RESTART_TITLE,Restart London Is Falling?
+CANCEL,Keep My Progress
+RESTART_TITLE,Begin the Tale Anew?
 RESTART_BODY,"This replaces your chapter progress, including letters, notes, and hints. Your settings will be kept."
-RESTART_CONFIRM,Restart the chapter
+RESTART_CONFIRM,Restart the Chapter
 PAUSE_EYEBROW,The Stage Will Wait
 PAUSED,Intermission
-SAVE_MENU,Save & return to the title
+SAVE_MENU,Save & Return to the Title
 SAVE_OK,Progress saved
 SAVE_FAILED,Could not save. Your progress is still in memory; please retry before quitting.
 SAVE_RECOVERED,Recovered your progress from the last good backup.
 SAVE_DAMAGED,The save is damaged or from an older build. The chapter will start fresh.
 SETTINGS_FAILED,Settings could not be saved to disk.
-SAVE_SETTINGS,Apply & return
+SAVE_SETTINGS,Apply & Return
 SETTING_SENSITIVITY,Mouse sensitivity
 SETTING_FOV,Field of view
 SETTING_MUSIC,Music volume
@@ -69,7 +69,7 @@ OBJECTIVE_LOCK,Four letters. Set the lock on the door.
 OBJECTIVE_LEAVE,Beyond the door hangs a painting of London. Step into it.
 OBJECTIVE_END,London waits beyond the scenery.
 NOTE_EYEBROW,YOU READ
-PUT_DOWN,Lay it down
+PUT_DOWN,Lay It Down
 SLOT_EMPTY,Nothing is there.
 MIRROR_DIALS_LOCKED,The dials will not move. Below the mirror is an empty socket shaped like a skull.
 MIRROR_NEEDS_HANDLE,An empty socket shaped like a small skull. A handle must belong here.
@@ -198,7 +198,7 @@ MIRROR_TITLE,The Witness in the Mirror
 MACBETH_TITLE,The Empty Seat
 BALCONY_TITLE,Across the Divide
 LOCK_TITLE,The letter lock
-HINT,Reveal the next hint
+HINT,Reveal the Next Hint
 HINT_AGES_1,Hint 1 / 3 — The book of the seven ages on the sideboard beneath the brass dial explains what each token means.
 HINT_AGES_2,"Hint 2 / 3 — Start at the socket under the gold arrow and go clockwise through a life: cradle, satchel, rose, sword, scales, cane, snuffed candle."
 HINT_AGES_3,"Hint 3 / 3 — Pick up a token with E, then press E on another socket to swap them. Top socket: cradle; then clockwise satchel, rose, sword, scales, cane, candle."
@@ -422,7 +422,7 @@ My fair lady sleeps beneath the arch;
 The witches sing to wake her, and she’ll march.
 Whoever treads her bridge when she doth wake
 Shall fall with London Bridge, for her sake."
-JOURNAL,Journal & belongings
+JOURNAL,Journal & Belongings
 JOURNAL_EYEBROW,WHAT THE ROOM HAS TOLD YOU
 JOURNAL_LETTERS,LETTERS FOUND
 JOURNAL_HINTS,HINTS
@@ -437,11 +437,11 @@ HANDLE_INSTALLED,Skull Handle — fitted in the mirror cabinet.
 MOON_INSTALLED,Moon Lens — fitted in the moon lantern.
 SUN_INSTALLED,Sun Lens — fitted in the sun lantern.
 END_EYEBROW,LONDON IS FALLING  ·  CHAPTER COMPLETE
-END_TITLE,The last train
+END_TITLE,The Last Train
 END_BODY,"The repaired train pulls away. Behind you, the house, the stars and the shadows disappear into the tunnel.
 
 You have escaped London Is Falling."
-END_LOOK,Return to the platform
+END_LOOK,Return to the Platform
 OBJECTIVE_RIPPER_EXIT,The constable has unbarred the Mourning Gate. Leave Whitechapel through it.
 SHADOW_TITLE,The False Exit
 SHADOW_LAMP,the constable’s street plan
@@ -690,7 +690,7 @@ COOP_ADDRESS_NOTE,"On the same network, your companion types this address. Over 
 COOP_HOST_FAILED,The game could not be hosted. Is another copy already hosting?
 COOP_JOINED,A companion has joined.
 COOP_JOINED_PLAYING,A companion has joined your tale.
-COOP_BEGIN,Begin together
+COOP_BEGIN,Begin Together
 COOP_JOIN_BODY,Type the address your host sees on their page.
 COOP_CONNECT,Connect
 COOP_CONNECTING,"Knocking at the host’s door… Once connected, wait for them to begin."

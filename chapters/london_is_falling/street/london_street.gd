@@ -42,8 +42,9 @@ func _ready() -> void:
 		song.loop_end = roundi(song.get_length() * song.mix_rate)
 		chant.stream = song
 		chant.position = SQUARE.CENTER + Vector3(0, 1.6, 0)
-		chant.unit_size = 9.0
-		chant.max_distance = 40.0
+		# Heard only in and around the square, not back in Balcony Lane.
+		chant.unit_size = 4.0
+		chant.max_distance = 20.0
 		chant.autoplay = true
 		add_child(chant)
 	_add_player(Vector3(3.6, 3.4, -21.0), Vector3(-3.6, 2.2, -14.5))
@@ -93,12 +94,12 @@ func music_duck() -> float:
 	if player == null:
 		return 0.0
 	var distance: float = player.global_position.distance_to(SQUARE.CENTER)
-	return clampf(1.0 - (distance - 8.0) / 18.0, 0.0, 1.0)
+	return clampf(1.0 - (distance - 6.0) / 12.0, 0.0, 1.0) * 0.8
 
 
 func set_world_volume(linear: float) -> void:
 	if chant != null:
-		chant.volume_db = linear_to_db(maxf(linear * 2.2, 0.0001))
+		chant.volume_db = linear_to_db(maxf(linear * 1.0, 0.0001))
 
 
 ## A cloud crosses the sun when the fair lady climbs out: the bright afternoon drains to a

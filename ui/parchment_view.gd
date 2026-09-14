@@ -97,28 +97,12 @@ func _scroll(stack: VBoxContainer) -> void:
 	shell.add_child(bottom)
 	stack.add_child(shell)
 	sheet.add_child(_verse(body.split("\n"), true, 22))
-	var signature := HBoxContainer.new()
-	signature.alignment = BoxContainer.ALIGNMENT_CENTER
-	var seal := Seal.new()
-	seal.scale = Vector2(0.58, 0.58)
-	seal.custom_minimum_size = Vector2(44, 44)
-	# Wax sits on the lower roller as part of the document itself.
-	var stamp := Control.new()
-	stamp.custom_minimum_size = Vector2(44, 44)
-	stamp.add_child(seal)
-	signature.add_child(stamp)
-	shell.add_child(signature)
 
 
 func _letter(stack: VBoxContainer) -> void:
 	var sheet := _sheet(Vector2(610, 0), "letter", Vector2(64, 40))
 	stack.add_child(sheet)
-	var column: VBoxContainer = _verse(body.split("\n"), true, 22)
-	sheet.add_child(column)
-	var seal_row := HBoxContainer.new()
-	seal_row.alignment = BoxContainer.ALIGNMENT_END
-	column.add_child(seal_row)
-	seal_row.add_child(Seal.new())
+	sheet.add_child(_verse(body.split("\n"), true, 22))
 
 
 func _tablet(stack: VBoxContainer) -> void:
@@ -150,10 +134,17 @@ func _book(stack: VBoxContainer) -> void:
 	var lines: PackedStringArray = body.split("\n")
 	var half: int = ceili(lines.size() / 2.0)
 	for page: int in range(2):
-		var sheet := _sheet(Vector2(450, 500), "page_left" if page == 0 else "page_right", Vector2(40, 34))
+		var sheet := _sheet(Vector2(530, 520), "page_left" if page == 0 else "page_right", Vector2(44, 46))
 		spread.add_child(sheet)
 		var slice: PackedStringArray = lines.slice(0, half) if page == 0 else lines.slice(half)
 		var column: VBoxContainer = _verse(slice, page == 0, 18)
+		column.alignment = BoxContainer.ALIGNMENT_BEGIN
+		if page == 1:
+			# The facing page starts level with the first line of verse, below the heading.
+			var level := Control.new()
+			level.custom_minimum_size.y = 58
+			column.add_child(level)
+			column.move_child(level, 0)
 		if page == 1:
 			column.add_child(_line("❧", 22, RUBRIC))
 		sheet.add_child(column)
@@ -185,10 +176,14 @@ func _verse(lines: PackedStringArray, with_title: bool, size: int) -> VBoxContai
 		heading.add_theme_font_override("font", title_font())
 		column.add_child(heading)
 		column.add_child(Rule.new())
-	var first: bool = with_title
-	for text: String in lines:
-		if first and text.length() > 1 and text.length() < 58 and text.left(1).is_valid_identifier():
-			first = false
+	if with_title:
+		# Breathing room so the raised capital never touches the rule above it.
+		var gap := Control.new()
+		gap.custom_minimum_size.y = 6
+		column.add_child(gap)
+	for index: int in range(lines.size()):
+		var text: String = lines[index]
+		if with_title and index == 0 and text.length() > 1 and text.length() < 58 and text.left(1).is_valid_identifier():
 			column.add_child(_capital_line(text, body_size))
 			continue
 		column.add_child(_line(text, body_size, INK))
@@ -209,8 +204,11 @@ func _capital_line(text: String, size: int) -> Control:
 	var holder := Control.new()
 	var cap_font: Font = title_font()
 	var body_font: Font = ink_font()
-	holder.custom_minimum_size = Vector2(cap_font.get_string_size(text.left(1), HORIZONTAL_ALIGNMENT_LEFT, -1, capital_size).x + 2.0, body_font.get_height(size))
-	capital.position = Vector2(0, body_font.get_ascent(size) - cap_font.get_ascent(capital_size))
+	var height: float = maxf(body_font.get_height(size), cap_font.get_ascent(capital_size) + body_font.get_descent(size))
+	holder.custom_minimum_size = Vector2(cap_font.get_string_size(text.left(1), HORIZONTAL_ALIGNMENT_LEFT, -1, capital_size).x + 2.0, height)
+	# The rest of the line sits at the bottom of the row; its baseline is the capital's.
+	var baseline: float = height - body_font.get_descent(size)
+	capital.position = Vector2(0, baseline - cap_font.get_ascent(capital_size))
 	holder.add_child(capital)
 	row.add_child(holder)
 	var rest: Label = _line(text.substr(1), size, INK)
@@ -225,7 +223,7 @@ func _line(text: String, size: int, color: Color) -> Label:
 	var label := Label.new()
 	label.text = text
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	label.custom_minimum_size.x = 360 if style == "book" else 500
+	label.custom_minimum_size.x = 440 if style == "book" else 500
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.add_theme_font_override("font", ink_font())
 	label.add_theme_font_size_override("font_size", size)
@@ -362,27 +360,6 @@ class Rule:
 			var angle: float = TAU * index / 16.0
 			points.append(mid + Vector2(cos(angle), sin(angle)) * (7.0 if index % 2 == 0 else 3.0))
 		draw_colored_polygon(points, ParchmentView.RUBRIC)
-
-
-## A red wax seal pressed with a quill device.
-class Seal:
-	extends Control
-
-	func _init() -> void:
-		custom_minimum_size = Vector2(76, 76)
-
-	func _draw() -> void:
-		var c := Vector2(38, 38)
-		var rim := PackedVector2Array()
-		for index: int in range(28):
-			var angle: float = TAU * index / 28.0
-			rim.append(c + Vector2(cos(angle), sin(angle)) * (32.0 + sin(index * 2.7) * 3.0))
-		draw_colored_polygon(rim, Color("6e1010"))
-		draw_circle(c, 24, Color("9a1c16"))
-		draw_arc(c, 24, 0, TAU, 40, Color("c0392b"), 2.0, true)
-		draw_arc(c, 18, 0, TAU, 32, Color("5a0a0a"), 1.5, true)
-		draw_line(c + Vector2(-9, 11), c + Vector2(10, -12), Color("e8a58c"), 3.0, true)
-		draw_circle(c + Vector2(-2, 3), 4.5, Color("e8a58c"))
 
 
 ## Fine marginal rules and engraved corner marks, separate from the readable text.
