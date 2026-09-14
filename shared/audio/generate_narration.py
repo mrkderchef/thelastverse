@@ -1,0 +1,116 @@
+"""Render English act poems with local Kokoro neural TTS (no paid API).
+
+Setup and model sources: docs/narration.md. Run with:
+.tools/narration-venv/bin/python shared/audio/generate_narration.py
+"""
+import argparse
+import json
+from pathlib import Path
+import re
+import tempfile
+
+import numpy as np
+import soundfile as sf
+from kokoro_onnx import Kokoro
+
+ROOT = Path(__file__).resolve().parent
+PROJECT = ROOT.parent.parent
+RATE = 24000
+
+
+class Narrator(Kokoro):
+    def _create_audio(self, phonemes, voice, speed):
+        # The v1.1 model export expects float speed, whereas kokoro-onnx's
+        # input_ids branch casts it to int32 (also truncating speeds below 1).
+        tokens = self.tokenizer.tokenize(phonemes)
+        if len(tokens) > 510:
+            raise ValueError('Narration phrase exceeds the model context')
+        names = {item.name for item in self.sess.get_inputs()}
+        token_key = 'input_ids' if 'input_ids' in names else 'tokens'
+        inputs = {token_key: np.array([[0, *tokens, 0]], dtype=np.int64),
+                  'style': np.asarray(voice[len(tokens)], dtype=np.float32),
+                  'speed': np.array([speed], dtype=np.float32)}
+        return self.sess.run(None, inputs)[0].reshape(-1), RATE
+
+
+def verses():
+    source = (PROJECT / 'ui/story_book.gd').read_text(encoding='utf-8')
+    block = source[source.index('const VOICES'):source.index('const PAGES')]
+    return {key: json.loads('"' + text + '"')
+            for key, text in re.findall(r'"(\w+)": "((?:[^"\\]|\\.)*)"', block)}
+
+
+def spoken_line(line):
+    # Pronunciation only: keep the printed poem untouched.
+    return (line.replace('beakèd', 'beaked').replace('climb’st', 'climbest')
+            .replace('—', ',').replace('’', "'"))
+
+
+def render(engine, text, voice):
+    chunks = [np.zeros(round(RATE * 0.65), dtype=np.float32)]
+    cues = []
+    lines = text.split('\n')
+    for index, line in enumerate(lines):
+        # Slight phrasing changes, with a deliberate final question. Synthesis speed
+        # changes articulation without time-stretching or lowering the pitch.
+        speed = (0.90, 0.92, 0.91, 0.90, 0.88, 0.86)[index % 6]
+        samples, rate = engine.create(spoken_line(line), voice=voice,
+                                      speed=speed, lang='en-gb')
+        assert rate == RATE and len(samples) > RATE // 2
+        assert np.isfinite(samples).all()
+        cues.append(round(sum(len(chunk) for chunk in chunks) / RATE, 4))
+        # Only a very short edge fade, retaining consonants and natural timbre.
+        edge = min(120, len(samples) // 2)
+        samples[:edge] *= np.linspace(0, 1, edge)
+        samples[-edge:] *= np.linspace(1, 0, edge)
+        chunks.append(samples)
+        pause = 0.28 if line.rstrip()[-1] not in '.;?!—' else 0.52
+        if index == len(lines) - 2:
+            pause = 0.85
+        elif index == len(lines) - 1:
+            pause = 0.8
+        # This enjambment is one sentence, so avoid a full rhetorical stop.
+        if line.endswith('waters cold'):
+            pause = 0.12
+        chunks.append(np.zeros(round(RATE * pause), dtype=np.float32))
+    samples = np.concatenate(chunks)
+    # Preserve expression; match whole-verse loudness and leave playback headroom.
+    active = samples[np.abs(samples) > 0.012]
+    rms = float(np.sqrt(np.mean(active ** 2)))
+    gain = min(10 ** (-20 / 20) / max(rms, 1e-6), 0.58 / np.max(np.abs(samples)))
+    return samples * gain, cues
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--voice', default='bm_george')
+    parser.add_argument('--act', choices=list(verses()))
+    parser.add_argument('--output', type=Path, default=ROOT / 'narrator')
+    parser.add_argument('--models', type=Path, default=PROJECT / '.tools/narration-models')
+    args = parser.parse_args()
+    engine = Narrator(str(args.models / 'kokoro-v1.0.onnx'), str(args.models / 'voices-v1.0.bin'))
+    texts = verses()
+    if args.act:
+        texts = {args.act: texts[args.act]}
+    args.output.mkdir(parents=True, exist_ok=True)
+    # Stage every requested verse before replacing the game's recordings.
+    with tempfile.TemporaryDirectory() as temporary:
+        stage = Path(temporary)
+        timings = {}
+        for key, text in texts.items():
+            samples, cues = render(engine, text, args.voice)
+            sf.write(stage / (key + '.wav'), samples, RATE, subtype='PCM_16')
+            timings[key] = cues
+            print(f'{key}: {len(samples) / RATE:.2f}s, {args.voice}', flush=True)
+        cue_file = args.output / 'narration_cues.gd'
+        if args.act and cue_file.exists():
+            previous = json.loads(cue_file.read_text().split('const STARTS := ', 1)[1])
+            timings = {**previous, **timings}
+        for key in texts:
+            (args.output / (key + '.wav')).write_bytes((stage / (key + '.wav')).read_bytes())
+        cue_file.write_text('# Generated by shared/audio/generate_narration.py\nextends RefCounted\n'
+                            + 'const STARTS := ' + json.dumps(timings, indent=4) + '\n')
+
+
+if __name__ == '__main__':
+    main()

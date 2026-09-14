@@ -1,0 +1,702 @@
+keys,en
+MENU_EYEBROW,"A Volume of Lost Voices, newly Set Forth"
+MENU_TITLE,THE LAST VERSE
+MENU_CHAPTER,"Shakespeare
+and London Times"
+CHAPTER_ONE_EYEBROW,"The First Chapter, called"
+CHAPTER_ONE_SETTING,BEING A TRUE ACCOUNT OF A CITY OUTSIDE TIME
+MENU_DESCRIPTION,"Thou wak’st where borrow’d verses lie asleep,
+In rooms a dead man’s secrets still would keep.
+The city sings, the bridge begins to sway;
+Below, the plague; above, a night of prey.
+Through fog and cradles, stars and iron rail,
+One door is left before thy lamp shall fail —
+Wilt thou escape the London of his play?"
+MENU_NOTICE,"Imprinted at London, in the Yeare of Our Lord 1606"
+STATUS_NEW,NOT STARTED
+STATUS_PROGRESS,ACT I  ·  THE UNWRITTEN ROOM   —   LETTERS %d / 4
+STATUS_COMPLETE,LONDON IS FALLING  ·  CHAPTER COMPLETE
+LOCKED_EYEBROW,Chapter %s
+LOCKED_TITLE,???
+LOCKED_STATUS,AS YET UNWRITTEN
+LOCKED_BODY,This leaf is blank. Its ink hath not yet dried.
+PAGER,~ Leaf %d of %d ~
+BROWSE_HINT,←  →  Browse chapters     ·     Enter  Select
+BEGIN,Begin the Tale
+RESUME,Resume the Tale
+NEW_RUN,Begin Anew
+SETTINGS,Settings
+QUIT,Close the Volume
+BACK,Back
+CANCEL,Keep my progress
+RESTART_TITLE,Restart London Is Falling?
+RESTART_BODY,"This replaces your chapter progress, including letters, notes, and hints. Your settings will be kept."
+RESTART_CONFIRM,Restart the chapter
+PAUSE_EYEBROW,The Stage Will Wait
+PAUSED,Intermission
+SAVE_MENU,Save & return to the title
+SAVE_OK,Progress saved
+SAVE_FAILED,Could not save. Your progress is still in memory; please retry before quitting.
+SAVE_RECOVERED,Recovered your progress from the last good backup.
+SAVE_DAMAGED,The save is damaged or from an older build. The chapter will start fresh.
+SETTINGS_FAILED,Settings could not be saved to disk.
+SAVE_SETTINGS,Apply & return
+SETTING_SENSITIVITY,Mouse sensitivity
+SETTING_FOV,Field of view
+SETTING_MUSIC,Music volume
+SETTING_EFFECTS,Voice & effects volume
+SETTING_INVERT,Invert vertical mouse look
+SETTING_FULLSCREEN,Fullscreen
+SETTING_DISTORTION,Visual distortion
+SETTING_COMFORT,"Visual distortion controls grain, warping, look smear, and torn scanlines; set it to 0 for a clean image. No head bob, bright flashes, or timed puzzles. The fall of London Bridge contains one sudden scare and a scripted backwards fall."
+HUD_CHAPTER,ACT I  /  THE UNWRITTEN ROOM
+HUD_HOLDING,IN HAND:  %s
+PROMPT_LOOK,[Right click]  Look closer
+PROMPT_READ,[E]  Read %s
+PROMPT_TAKE,[E]  Take %s
+PROMPT_PICK,[E]  Pick up %s
+PROMPT_PLACE,[E]  Put %s here
+PROMPT_SWAP,[E]  Swap with %s
+PROMPT_TURN_DIAL,[E]  Turn the dial
+PROMPT_FIT_HANDLE,[E]  Fit the Skull Handle
+PROMPT_TURN_LANTERN,[E]  Turn the lantern
+PROMPT_FIT_SUN,[E]  Fit the Sun Lens
+PROMPT_FIT_MOON,[E]  Fit the Moon Lens
+PROMPT_LOCK,[E]  Turn the wheel forward     ·     [Right click]  Turn it back
+OBJECTIVE_NOTE,Read the page on the desk beneath the window.
+OBJECTIVE_SEARCH,The door is shut with a letter lock. Search the room.
+OBJECTIVE_LOCK,Four letters. Set the lock on the door.
+OBJECTIVE_LEAVE,Beyond the door hangs a painting of London. Step into it.
+OBJECTIVE_END,London waits beyond the scenery.
+NOTE_EYEBROW,YOU READ
+PUT_DOWN,Lay it down
+SLOT_EMPTY,Nothing is there.
+MIRROR_DIALS_LOCKED,The dials will not move. Below the mirror is an empty socket shaped like a skull.
+MIRROR_NEEDS_HANDLE,An empty socket shaped like a small skull. A handle must belong here.
+HANDLE_FITTED,"The Skull Handle clicks into place, and the cloth slides from the mirror."
+LENS_FITTED,The lens slides home. A thin beam of light leaves the lantern.
+LANTERN_NO_LENS_SUN,The sun lantern is dark. Its empty lens ring is tinted amber.
+LANTERN_NO_LENS_MOON,The moon lantern is dark. Its empty lens ring is pale glass.
+TAKEN_HANDLE,You pocket the Skull Handle.
+TAKEN_MOON,You pocket the Moon Lens.
+TAKEN_SUN,You pocket the Sun Lens.
+SOLVED_AGES,The dial glows and a drawer slides open beneath it.
+SOLVED_MIRROR,"The glass clouds over, and the cabinet’s lower door swings open."
+SOLVED_MACBETH,Something pale is sitting in the empty chair. A drawer opens in the sideboard.
+SOLVED_BALCONY,Both balconies light. The curtain rises and a walkway joins them.
+SOLVED_LOCK,The shackle springs free. The door swings open.
+AGES_SOCKET,the dial socket
+AGES_INSPECT,"A brass dial with seven sockets, each holding a small carved token. A gold arrow above the top socket points clockwise."
+MIRROR_DIAL,the symbol dial
+MIRROR_DIAL_INSPECT,A brass dial with a carved symbol in its window. It clicks round through five symbols.
+HANDLE_SOCKET_NAME,the skull-shaped socket
+MIRROR_INSPECT,A tall cabinet with a mirror. Below the mirror are three symbol dials and a skull-shaped socket. Three props stand on top.
+BANQUET_SEAT,the chair
+MACBETH_INSPECT,"A toy banquet. Each chair back has one to four notches. A gold mark on the floor shows where to stand, and an arrow on the front edge points right."
+LANTERN_SUN_NAME,the sun lantern
+LANTERN_MOON_NAME,the moon lantern
+BALCONY_INSPECT,"A model theatre: a balcony hung with roses on the left, one hung with ivy on the right, a black curtain between them. Two crossed lanterns stand in front, one topped with a gold sun disc, one with a pale crescent."
+LOCK_WHEEL,the letter wheel
+LOCK_INSPECT,A heavy lock with four lettered wheels.
+ITEM_HANDLE_NAME,the Skull Handle
+TAKE_HANDLE_INSPECT,A cabinet handle carved like a small skull.
+ITEM_MOON_NAME,the Moon Lens
+TAKE_MOON_INSPECT,A pale glass lens in an iron ring.
+ITEM_SUN_NAME,the Sun Lens
+TAKE_SUN_INSPECT,A warm amber lens in an iron ring.
+TOKEN_CRADLE,the cradle token
+TOKEN_SATCHEL,the satchel token
+TOKEN_ROSE,the rose token
+TOKEN_SWORD,the sword token
+TOKEN_SCALES,the scales token
+TOKEN_CANE,the cane token
+TOKEN_CANDLE,the snuffed-candle token
+FIGURE_HOST,the crowned host
+FIGURE_COMPANION,the companion in the hat
+FIGURE_GUEST,the guest
+NOTE_TITLE,an unsigned letter
+NOTE_INSPECT,A folded page lies on the desk in the candlelight.
+NOTE_BODY,"Thou art not here by chance, but hither cast;
+The door is barr’d, and barr’d shall be to last,
+Till thou dost cry the word all mortals cry
+When walls close in and none will make reply.
+Four tales lie sleeping in this chamber’s keep:
+A life upon a dial, wound full deep;
+A witness in the glass; a feast of dread,
+Where one chair waiteth for the risen dead;
+Two houses that will never meet in light.
+Each tale, once play’d, shall yield a letter right;
+Count thou the marks beneath, to learn its place."
+BOOKLET_TITLE,the book of the seven ages
+BOOKLET_INSPECT,A small booklet lies open on the sideboard beneath the brass dial.
+BOOKLET_BODY,"All the world’s a stage,
+And one man in his time plays many parts,
+His acts being seven ages, drawn in brass:
+The Cradle first, wherein the infant cries;
+The Satchel next, ’neath schoolboy’s sullen eyes;
+The Rose, for lover sighing at the moon;
+The Sword, the soldier’s quarrel, sudden, soon;
+The Scales, the justice weighing right from wrong;
+The Cane, the old man’s staff, his walk not long;
+The Candle snuff’d, last scene of all, when light
+Is gone, and second childhood brings the night.
+Begin beneath the arrow wrought in gold,
+And follow where it points, as time is told."
+CARD_TITLE,a card within the glass
+CARD_INSPECT,A card tucked into the corner of the mirror frame.
+CARD_BODY,"Trust not thine eyes, for eyes may be deceiv’d;
+The glass alone speaks true, and is believ’d.
+What stands atop is set the wrongful way:
+Read thou the mirror as its arrow lay,
+From left to right the witness’ tale unfold,
+And turn the dials as the glass hath told."
+SHEET_TITLE,the order of the feast
+SHEET_INSPECT,A sheet pinned to the red backdrop of the toy banquet.
+SHEET_BODY,"The crownèd host upon the second seat;
+His hatted fellow, one chair right, doth meet;
+The guest upon the fourth. The first stands bare,
+For one unbidden, whom none sees, sits there.
+Count thou the notches carvèd on each back,
+From left to right, as runs the arrow’s track."
+DIAGRAM_TITLE,a lantern-maker’s sketch
+DIAGRAM_INSPECT,A sketch lies on the table of the model theatre.
+DIAGRAM_BODY,"The Sun doth love the Rose, and her alone;
+The Moon doth keep the Ivy for her own.
+Let each lamp find the house it holdeth dear,
+For neither house will wake to other’s cheer.
+Two lanterns crossèd stand, and there’s the art:
+Give each its lens, and join them, heart to heart."
+PAGE_BED_TITLE,a note beneath the pillow
+PAGE_BED_INSPECT,A folded note sticks out from under the pillow.
+PAGE_BED_BODY,"No sleep hath found me since the players fled.
+By night the chairs do walk about my bed,
+As if some unseen hand did block a scene;
+This morn my pillow fac’d the door. What mean
+These stirrings in a house where none doth dwell?"
+PAGE_CUES_TITLE,a trampled cue sheet
+PAGE_CUES_INSPECT,"A cue sheet lies on the rug, printed with boot marks."
+PAGE_CUES_BODY,"Cue one: the candle. Cue the second: rain.
+Cue three: the bridge doth fall, and fall again.
+Cue four is torn away. And in the side,
+Scratch’d in a hand that trembled as it tried:
+Why doth the song grow swifter, night by night?"
+PAGE_COSTUMES_TITLE,an inventory of costumes
+PAGE_COSTUMES_INSPECT,A list lies on the costume trunk.
+PAGE_COSTUMES_BODY,"One crown of tin, much dented by the fall;
+One skull of plaster, grinning at the wall;
+Two lanterns lacking lenses, dark and cold;
+A gown for her who came not, as foretold;
+One ghost, that will not learn his part, nor leave."
+PAGE_WINDOW_TITLE,a note nail’d by the window
+PAGE_WINDOW_INSPECT,A scrap of paper is nailed to the wall beside the painted window.
+PAGE_WINDOW_BODY,"No hand did paint this window, so they swear;
+No brush confesseth ever it was there.
+And yet the moon within hath not once stirr’d
+These eleven nights, nor wind nor bird is heard."
+AGES_TITLE,The Seven Ages
+MIRROR_TITLE,The Witness in the Mirror
+MACBETH_TITLE,The Empty Seat
+BALCONY_TITLE,Across the Divide
+LOCK_TITLE,The letter lock
+HINT,Reveal the next hint
+HINT_AGES_1,Hint 1 / 3 — The book of the seven ages on the sideboard beneath the brass dial explains what each token means.
+HINT_AGES_2,"Hint 2 / 3 — Start at the socket under the gold arrow and go clockwise through a life: cradle, satchel, rose, sword, scales, cane, snuffed candle."
+HINT_AGES_3,"Hint 3 / 3 — Pick up a token with E, then press E on another socket to swap them. Top socket: cradle; then clockwise satchel, rose, sword, scales, cane, candle."
+HINT_MIRROR_1,Hint 1 / 3 — The mirror cabinet needs the Skull Handle from the drawer under the brass dial. Then read the card within the glass.
+HINT_MIRROR_2,"Hint 2 / 3 — Match the dials to the glowing shapes in the mirror, left to right. Ignore the props standing on top of the cabinet."
+HINT_MIRROR_3,"Hint 3 / 3 — Set the dials, left to right: ear, crown, cup."
+HINT_MACBETH_1,Hint 1 / 3 — Read the order of the feast pinned to the banquet backdrop. Count the seats by the notches on the chair backs.
+HINT_MACBETH_2,"Hint 2 / 3 — The host sits on the two-notch chair, the companion on the chair to its right, the guest on four notches."
+HINT_MACBETH_3,Hint 3 / 3 — One notch: empty. Two notches: crowned host. Three: the companion in the hat. Four: the guest.
+HINT_BALCONY_1,Hint 1 / 3 — The lanterns need the Sun Lens from the banquet and the Moon Lens from the mirror cabinet. A lantern-maker’s sketch lies on the theatre table.
+HINT_BALCONY_2,"Hint 2 / 3 — The sun lantern (gold disc) belongs to the rose balcony, the moon lantern (crescent) to the ivy balcony."
+HINT_BALCONY_3,"Hint 3 / 3 — Fit both lenses, then press E on each lantern until its beam reaches the matching balcony."
+HINT_LOCK_1,Hint 1 / 3 — Each finished story leaves a card with a letter. The marks beneath a letter give its place on the lock.
+HINT_LOCK_2,"Hint 2 / 3 — One mark goes first, four marks last. The top of your journal shows every letter found so far."
+HINT_LOCK_3,"Hint 3 / 3 — Turn the wheels to H, E, L, P."
+HUD_CHAPTER_STREET,ACT II  /  THE CITY IS A STAGE
+STATUS_STREET,ACT II  ·  THE CITY IS A STAGE
+OBJECTIVE_LANE,An iron curtain closes Balcony Lane. The players are missing their props.
+OBJECTIVE_SQUARE,A portcullis bars the Witches’ Square. The cauldron is waiting.
+OBJECTIVE_BRIDGE,The drawbridge is raised. Something in the stones of London Bridge is waiting.
+OBJECTIVE_CROSS,The drawbridge is down. Cross London Bridge.
+PROMPT_BREW,[E]  Drop %s into the cauldron
+PROMPT_LEVER,[E]  Pull the lever
+BREW_ADDED,"It sinks, and the brew hisses."
+BREW_SPOILED,The cauldron heaves and spits everything back onto the stall.
+BREW_EMPTY_HANDS,The brew bubbles. Something from the stall belongs in it.
+LEVER_WRONG,The engine groans and the lever springs back. The date must be wrong.
+SOLVED_PROPS,"Stage lights blaze on the lovers, and the iron curtain rises."
+SOLVED_BREW,Green smoke pours from the cauldron. The portcullis rattles upward.
+SOLVED_BRIDGE,"Chains rattle, and the drawbridge swings down across the Thames."
+PROP_CART,the prop cart
+PROP_ROMEO,Romeo’s outstretched hand
+PROP_JULIET,Juliet’s hand
+PROP_FRIAR,Friar Laurence’s hand
+PROPS_INSPECT,"Players frozen mid-scene, their hands empty. A prop cart stands against the wall."
+CAULDRON,the cauldron
+BREW_INSPECT,"Three witches lean over a bubbling cauldron, waiting for something to be added."
+SHELF_SLOT,the stall shelf
+SHELF_INSPECT,"Six stoppered jars on an apothecary stall, each with something grisly on the lid."
+CALENDAR_MONTH,the month wheel
+CALENDAR_DAY,the day wheel
+BRIDGE_LEVER,the engine lever
+ENGINE_INSPECT,The bridge engine: two calendar wheels and a heavy lever.
+PROP_ROSE,the rose
+PROP_LETTER,the sealed letter
+PROP_VIAL,the vial
+PROP_SKULL,the skull
+PROP_CROWN,the tin crown
+INGREDIENT_EYE,the eye of newt
+INGREDIENT_TOE,the toe of frog
+INGREDIENT_WOOL,the wool of bat
+INGREDIENT_TONGUE,the tongue of dog
+INGREDIENT_FEATHER,the raven feather
+INGREDIENT_MANDRAKE,the mandrake root
+PLAYBILL_TITLE,the playbill
+PLAYBILL_INSPECT,A playbill pasted to the wall beside the prop cart.
+PLAYBILL_BODY,"Tonight: the Lovers at the Window.
+Let Romeo, who kneels, a Rose extend;
+Fair Juliet the sealèd Letter tend;
+Good Friar Laurence hold the Vial deep,
+The potion that doth counterfeit a sleep.
+The Skull and Crown to other plays belong;
+Leave them upon the cart, or all goes wrong."
+INCANTATION_TITLE,a torn page of spells
+INCANTATION_INSPECT,A page nailed to the apothecary stall.
+INCANTATION_BODY,"Eye of newt and toe of frog,
+Wool of bat and tongue of dog.
+One by one the cauldron fill,
+As the words are spoke, or ill
+Shall the brew cast back its fare.
+Feather, root: let them lie there.
+But mark: no pot will take its meat
+Unless the fire burn at its heat.
+Each sister holds, torn from this page,
+The flame each morsel needs. Engage
+The bellows, read what each doth keep,
+And feed the fire, or brew shall weep.
+And when the pot doth smoke and sing,
+The lady in the bridge shall wake and bring
+Her song to all who cross upon the stone."
+TENDER_NOTE_TITLE,the bridgemaster’s orders
+TENDER_NOTE_INSPECT,Orders pinned to the bridge engine.
+TENDER_NOTE_BODY,"This bridge shall bow its iron head alone
+Upon the day when Caesar’s doom was shown.
+Set thou the month upon the leftward wheel,
+The day upon the right, then pull the steel.
+If thou forget the day, go ask of him
+Who warns the great beside the river grim."
+SOOTHSAYER_TITLE,the soothsayer’s scroll
+SOOTHSAYER_INSPECT,A scroll on a lectern beside the soothsayer.
+SOOTHSAYER_BODY,"Beware the ides of March!
+I cried it once to Caesar in the street;
+He heeded not, and fell at Pompey’s feet."
+ALMANAC_TITLE,a leaf of the almanac
+ALMANAC_INSPECT,"A page from an almanac, pinned beside the engine."
+ALMANAC_BODY,"The Kalends is the first of every moon;
+The Ides of March, of May, of July’s noon,
+And of October fall upon fifteen;
+All other months upon thirteen, I ween."
+PROPS_TITLE,The Balcony Scene
+BREW_TITLE,The Witches’ Brew
+BRIDGE_TITLE,The Ides of March
+HINT_PROPS_1,Hint 1 / 3 — Read the playbill on the wall beside the prop cart.
+HINT_PROPS_2,"Hint 2 / 3 — Romeo gets the rose, Juliet the letter, Friar Laurence the vial. The skull and the crown stay on the cart."
+HINT_PROPS_3,"Hint 3 / 3 — Pick up a prop from the cart with E, then press E on an actor’s empty hand. When all three hold the right prop, the curtain lifts."
+HINT_BREW_1,Hint 1 / 3 — The torn page on the stall gives the order of the ingredients. Each witch holds a scrap in her hand: read all three.
+HINT_BREW_2,Hint 2 / 3 — The scraps say how hot the fire must be for each ingredient. The bellows at the front of the cauldron move the fire from embers to a steady flame to a roaring blaze.
+HINT_BREW_3,"Hint 3 / 3 — Eye of newt on embers, toe of frog on a roaring blaze, wool of bat on a steady flame, tongue of dog on a roaring blaze. The feather and the root stay on the shelf."
+HINT_BRIDGE_1,"Hint 1 / 3 — Read the bridgemaster’s orders on the engine, then the soothsayer’s scroll."
+HINT_BRIDGE_2,Hint 2 / 3 — Caesar was warned of the Ides of March. The almanac beside the engine says which day that is.
+HINT_BRIDGE_3,"Hint 3 / 3 — Set the left wheel to MAR and the right wheel to 15, then pull the lever."
+HUD_CHAPTER_SEWER,ACT III  /  THE PLAGUE BENEATH
+HUD_CHAPTER_RIPPER,Whitechapel
+STATUS_SEWER,ACT III  ·  THE PLAGUE BENEATH
+STATUS_RIPPER,ACT III  ·  THE UNCAST SHADOW
+OBJECTIVE_SEWER,You fell into the plague sewer. Find a way out.
+OBJECTIVE_CRYPTS,Mark the crypts as the warrant bids.
+OBJECTIVE_CLIMB,The gate is open. Climb the ladder.
+OBJECTIVE_RIPPER,"Follow the Shadow while the gaslight fails. See him at every stop, then draw his road on the street plan at the Watch Post."
+BRIDGE_FALLING,London Bridge is falling down…
+SEWER_WAKE,You wake in filth and darkness. Something squeaks nearby.
+RIPPER_ARRIVE,You haul yourself out into a fog-choked street.
+SHADOW_SEEN,"A tall figure in a top hat stands in the fog, watching you."
+SOLVED_PLAGUE,Stone grinds on stone. The iron gate rises.
+CRYPT_MARKED,You daub a red cross on the door.
+CRYPT_SCRUBBED,You scrub the cross away.
+CRYPT_NO_BRUSH,A plague door. You have nothing to mark it with.
+PROMPT_MARK,[E]  Paint a plague cross
+PROMPT_SCRUB,[E]  Scrub the cross away
+PROMPT_CLIMB,[E]  Climb the ladder
+CRYPT_ROSE,the crypt of the rose
+CRYPT_CROWN,the crypt of the crown
+CRYPT_IVY,the crypt of the ivy
+CRYPT_BELL,the crypt of the bell
+CRYPT_INSPECT,A crypt door with a carved crest above it. Plague-men mark such doors with red crosses.
+ITEM_BRUSH_NAME,the paint brush
+TAKE_BRUSH_INSPECT,A brush standing in a pot of red paint.
+ITEM_BRUSH,"Plague brush — wet with red paint, for marking doors."
+LADDER,the ladder
+LADDER_INSPECT,Iron rungs climb toward a grate and a sliver of night sky.
+PLAGUE_TITLE,A Plague o’ Both Your Houses
+HINT_PLAGUE_1,"Hint 1 / 3 — Read the warrant on the lectern near the plague doctors, and take the brush from the pot of red paint."
+HINT_PLAGUE_2,Hint 2 / 3 — The feud was between the Capulets (the rose) and the Montagues (the ivy). The crown and bell crypts stay clean.
+HINT_PLAGUE_3,"Hint 3 / 3 — Paint a cross on the rose crypt and the ivy crypt, and nowhere else. Press E again on a door to scrub a wrong cross."
+WARRANT_TITLE,the plague-master’s warrant
+WARRANT_INSPECT,A warrant lies on the plague doctors’ lectern.
+WARRANT_BODY,"“A plague o’ both your houses!” so he cried,
+Young Mercutio, who for their quarrel died.
+Mark thou the houses twain that bred such hate:
+The Rose of Capulet, the Ivy gate
+Of Montague. The Crown and Bell spare thou,
+For they had naught to do with that old vow.
+When both are cross’d in red, as plague-men do,
+The gate shall rise and let the living through."
+PLAGUE_BILL_TITLE,a bill of mortality
+PLAGUE_BILL_INSPECT,A bill pasted to the sewer wall.
+PLAGUE_BILL_BODY,"This week the bells have toll’d for many more;
+Red crosses bloom on every stricken door.
+The rats grow fat, the doctors walk in beaks,
+And none hath heard the living here for weeks."
+SHADOW_LETTER_TITLE,the constable’s notice
+SHADOW_LETTER_INSPECT,A police notice pasted beside the Watch Post door.
+SHADOW_LETTER_BODY,"When gaslight gutters, then he walks abroad;
+When lamps burn full, he stands as still as stone.
+From this same Post he sets upon his road,
+And stops six times, and every time alone.
+Stand where thine eyes may find him at each halt,
+For I’ll not send a guess to Scotland Yard.
+Then on my plan, in order, trace his walk,
+And I shall lift the bar from Mourning Gate.
+He comes again, if once thou lose his trail —
+But who would walk his road, and not grow pale?"
+TRINKET_TAKEN,You pick up %s.
+TRINKET_INSPECT,"Of no use to anyone, but it has a pleasing weight. Press Q to throw it."
+TRINKET_APPLE,an apple
+TRINKET_PEAR,a pear
+TRINKET_BREAD,a loaf of bread
+TRINKET_BOTTLE,a bottle
+TRINKET_TANKARD,a pewter tankard
+TRINKET_BOOK,a book
+TRINKET_CABBAGE,a cabbage
+TRINKET_FISH,a fish
+TRINKET_CANDLE,a candle stub
+TRINKET_BONE,a bone
+TRINKET_CUP,a cup
+TRINKET_COIN,a coin purse
+PROMPT_KNOCK,[E]  Knock
+PROMPT_WELL,[E]  Draw water
+PROMPT_BELL,[E]  Ring the bell
+DOOR_NAME,the door
+DOOR_INSPECT,A painted front door with a brass knob.
+KNOCK_SILENCE,You knock. Nobody answers.
+KNOCK_BUSY,"“Not today, we’re rehearsing!”"
+KNOCK_DOG,A dog barks somewhere inside.
+KNOCK_LATER,“Come back after the second act!”
+KNOCK_WHO,“Who goes there?” Then silence.
+WELL_NAME,the well
+WELL_INSPECT,A stone well with a wooden winch.
+WELL_USED,"You haul up a bucket of cold, clear water."
+BELL_NAME,the market bell
+BELL_INSPECT,A brass bell hung from a post in the square.
+BELL_RUNG,DONG! The pigeons burst into the sky.
+PAINTING_NAME,the painting of London
+PAINTING_INSPECT,"London on a spring morning: bright houses, bunting, and a bridge over a blue river. The paint looks wet."
+PROMPT_PAINTING,[E]  Step into the painting
+PAINTING_ENTERED,"The paint gives way like water, and you are standing in the sunshine."
+WITCHES_SINGING,"Somewhere ahead, three voices are singing a nursery rhyme."
+LADY_RISES,Something is knocking from inside the bricked-up arch in the parapet.
+LADY_SINGS,"She drags herself toward you across the stones, singing."
+CONFESSION_TITLE,the mason’s confession
+CONFESSION_INSPECT,A weathered tablet set into the gatehouse wall.
+CONFESSION_BODY,"When first we built this bridge, it would not stand;
+The river tore each stone out of our hand.
+Then spake the master: “Give the flood its due.”
+We took a maid, a child of years but few,
+And walled her in the pier, and sang the while
+That London Bridge should stand a thousand mile.
+“Set a man to watch,” we sang, “all night.”
+Her key we cast away beyond all sight.
+My fair lady sleeps beneath the arch;
+The witches sing to wake her, and she’ll march.
+Whoever treads her bridge when she doth wake
+Shall fall with London Bridge, for her sake."
+JOURNAL,Journal & belongings
+JOURNAL_EYEBROW,WHAT THE ROOM HAS TOLD YOU
+JOURNAL_LETTERS,LETTERS FOUND
+JOURNAL_HINTS,HINTS
+JOURNAL_PAGES,LOOSE PAGES
+JOURNAL_EMPTY,Read the page on the desk to begin.
+INVENTORY_HEADING,BELONGINGS
+INVENTORY_EMPTY,Your pockets are empty.
+ITEM_HANDLE,Skull Handle — a cabinet handle carved like a small skull.
+ITEM_MOON,Moon Lens — pale glass in an iron ring.
+ITEM_SUN,Sun Lens — warm amber glass in an iron ring.
+HANDLE_INSTALLED,Skull Handle — fitted in the mirror cabinet.
+MOON_INSTALLED,Moon Lens — fitted in the moon lantern.
+SUN_INSTALLED,Sun Lens — fitted in the sun lantern.
+END_EYEBROW,LONDON IS FALLING  ·  CHAPTER COMPLETE
+END_TITLE,The last train
+END_BODY,"The repaired train pulls away. Behind you, the house, the stars and the shadows disappear into the tunnel.
+
+You have escaped London Is Falling."
+END_LOOK,Return to the platform
+OBJECTIVE_RIPPER_EXIT,The constable has unbarred the Mourning Gate. Leave Whitechapel through it.
+SHADOW_TITLE,The False Exit
+SHADOW_LAMP,the constable’s street plan
+SHADOW_LAMP_INSPECT,"A street plan of the district, pinned to the Watch Post desk. The constable wants the Shadow’s road, stop by stop."
+SHADOW_SHUTTER,Passage shutter
+SHADOW_WRONG,The gate stays barred. The constable wants a road you have seen with your own eyes.
+SOLVED_SHADOW,"The constable reads your report twice, and unbars the Mourning Gate."
+HINT_SHADOW_1,"Hint 1 / 3 — Read the notice beside the Watch Post door. The Shadow only moves while the lamps flicker and dim, and he starts from the Watch Post."
+HINT_SHADOW_2,"Hint 2 / 3 — Follow him at a distance and keep him in view whenever he stops beside a landmark sign. Each real sighting is confirmed on screen. If you lose him, wait: his circuit starts again at the Watch Post."
+HINT_SHADOW_3,"Hint 3 / 3 — His road: Cooper’s Yard, Bell Passage, Chapel Steps, Widow’s Well, Tanner’s Row, Mourning Gate. See all six, then mark them in that order on the street plan."
+SHADOW_AIM_0,The lantern lights the left passage. Its shadow breaks at a painted seam.
+SHADOW_PASSAGE_0,The left passage. A painted seam interrupts its shadow before the brass marker.
+SHADOW_AIM_1,The lantern lights the middle passage. Its shadow reaches the brass marker without a break.
+SHADOW_PASSAGE_1,The middle passage. A continuous shadow joins its threshold to the brass marker. Light it and pull this shutter.
+SHADOW_AIM_2,The lantern lights the right passage. Its shadow breaks at a painted seam.
+SHADOW_PASSAGE_2,The right passage. A painted seam interrupts its shadow before the brass marker.
+HUD_CHAPTER_COURTYARD,ACT IV  /  THE HOUSE THAT REMEMBERS
+HUD_CHAPTER_NURSERY,ACT IV  /  THE UNCOUNTED STARS
+HUD_CHAPTER_METROPOLITAN,ACT V  /  METROPOLITAN RAILWAY
+STATUS_COURTYARD,The house in the back court
+STATUS_NURSERY,The uncounted stars
+STATUS_METROPOLITAN,Metropolitan Railway
+OBJECTIVE_COURTYARD,Climb the back stairs. Read the record inside the house.
+OBJECTIVE_DYER_FALL,The record is yours. Follow the broken floorboards deeper into the house.
+OBJECTIVE_STARS,"Study the sky, the four keepers and their inscriptions. Align their sight; test the central seal."
+OBJECTIVE_STAR_WALK,The keepers are aligned. Decode their back marks and walk the four-part seal.
+OBJECTIVE_STAR_EXIT,The nursery door is open. Descend to the Metropolitan Railway.
+OBJECTIVE_METROPOLITAN,"Repair the locomotive. Set the two gauges, release the brake and prepare to depart."
+ARRIVE_COURTYARD,A bolt slams behind you. Whitechapel gives way to a back court; a stair leads into another year.
+ARRIVE_NURSERY,"The narrow passage opens into a vast room. Where the roof should be, six constellations watch the empty cots."
+ARRIVE_METROPOLITAN,"Steam, warm iron, gaslight. The Metropolitan Railway: London, 1863."
+DYER_FLOOR_GIVES,The boards sag beneath you. The room opens into a sky that should not be there.
+DYER_READ_FIRST,"A record lies on the table. This house has a name, and a history."
+DYER_RECORD_TITLE,The house at Reading
+DYER_RECORD_BODY,"From London’s fog to Reading art thou led;
+Here Dyer’s promise offered board and bed.
+For pay she took the infants into care;
+Yet murder hid behind that promise fair.
+In eighteen ninety-six her crimes were tried;
+The court found murder where her words had lied.
+These empty cots remember trust betrayed;
+The house below is memory remade."
+STAR_RULES_TITLE,The watchers’ law
+STAR_RULES_BODY,"Six figures burn; their lesser sparks ignore.
+Count but the linked stars watched by keepers four.
+No pair may claim one figure of the night;
+Their sum is three-and-twenty points of light.
+Sun, Tide look forth; Moon, Ash look o’er the shoulder;
+Turn each until its sight doth meet its holder.
+The brass beneath records which way they face;
+Press thou the seal to judge all four in place."
+STAR_COVENANT_TITLE,The covenant of four
+STAR_COVENANT_BODY,"The Sun hath two more stars than Tide can see;
+The Ash hath one more star than Moon’s decree.
+Tide counts the fewest of the chosen four;
+No watcher shares the heaven of one more.
+The sum upon the seal binds every light;
+Their faces may deceive thee in the night."
+STAR_WALK_TITLE,What the watchers conceal
+STAR_WALK_BODY,"When all four sights are true, let footsteps speak;
+The marks upon their backs are what ye seek.
+From fewest stars to most, the keepers read;
+Their back-marks, not their heavens, guide thy tread.
+Four stones in order wake the buried door;
+Step clear between, and wait for naught before.
+A stranger stone unthreads thy steps alone;
+The watchers keep the truth already known."
+STAR_ATLAS_TITLE,The six figures of the night
+STAR_ATLAS_BODY,"Three points a Triangle in heaven make;
+Four shape the Diamond where the pale lights wake.
+Five crown the sky; six turn the Key of night;
+Seven frame the Eye that keeps its inward light.
+Eight weave the Serpent where the heavens bend;
+The lesser, lonely stars no count shall lend."
+RAILWAY_HISTORY_TITLE,The railway under London
+RAILWAY_HISTORY_BODY,"In eighteen sixty-three the trains were run
+Beneath the streets, away from London’s sun.
+On January’s tenth the public came;
+The Metropolitan bore forth its name.
+From Paddington to Farringdon they rode;
+With steam and gas the buried passage glowed.
+The first such railway bore the city through;
+An older year now opens unto you."
+CELESTIAL_TITLE,The Uncounted Stars
+HINT_CELESTIAL_1,"Read all four nursery texts. Count the connected stars, inspect the keepers from both sides, and note the sum XXIII on the central seal. Nothing needs to be carried."
+HINT_CELESTIAL_2,"The four star counts are distinct, total 23, Sun = Tide + 2, and Ash = Moon + 1. Tide has the fewest. Moon and Ash look backward, so face them opposite their constellation. After alignment, order the keepers by star count and walk their back symbols."
+HINT_CELESTIAL_3,"Sun sees Crown (5), Moon sees Eye (7), Tide sees Triangle (3), Ash sees Serpent (8). Set facing directions: Sun Crown, Moon Diamond, Tide Triangle, Ash Crown. Press the seal. Then WALK Diamond → Eye → Key → Crown, leaving each plate between steps. Avoid the other plates."
+STAR_SEAL,The seal of twenty-three
+STAR_SEAL_INSPECT,"XXIII is cut into the seal. Press it after setting all four keepers. It judges their combined sight, not one statue at a time."
+PROMPT_STAR_CONFIRM,E  Test the four watchers
+KEEPER_TURNED,%s faces the %s bearing. Its sight may lie behind it.
+STARS_WRONG,The seal stays cold. The four sights do not satisfy the covenant. Their positions remain as you set them.
+STARS_ALIGNED,Four quiet chimes. The watchers hold. Now read their backs and walk the seal.
+STAR_WALK_WRONG,A discordant step. The footsteps clear; the watchers remain aligned.
+STAR_WALK_STEP,A soft chime. Another light on the central seal holds.
+SOLVED_CELESTIAL,The last chime answers. The nursery door opens; steam breathes from below.
+FLOOR_INSPECT,"An inlaid sign, large enough to stand on. After the watchers align, walking onto it enters a step. Using it by hand does nothing."
+KEEPER_SUN,The Sun keeper
+KEEPER_INSPECT_0,Sun is cut into the chest. A Eye is engraved on its back. The watchers’ law says this keeper sees forward. E turns the figure through six sky bearings.
+KEEPER_MOON,The Moon keeper
+KEEPER_INSPECT_1,Moon is cut into the chest. A Key is engraved on its back. The watchers’ law says this keeper sees behind its shoulders. E turns the figure through six sky bearings.
+KEEPER_TIDE,The Tide keeper
+KEEPER_INSPECT_2,Tide is cut into the chest. A Diamond is engraved on its back. The watchers’ law says this keeper sees forward. E turns the figure through six sky bearings.
+KEEPER_ASH,The Ash keeper
+KEEPER_INSPECT_3,Ash is cut into the chest. A Crown is engraved on its back. The watchers’ law says this keeper sees behind its shoulders. E turns the figure through six sky bearings.
+GLYPH_TRIANGLE,Triangle
+GLYPH_DIAMOND,Diamond
+GLYPH_CROWN,Crown
+GLYPH_KEY,Key
+GLYPH_EYE,Eye
+GLYPH_SERPENT,Serpent
+OBJECTIVE_HOUSE_BELLS,Hear the house’s memory and repeat it on the four bells.
+OBJECTIVE_HOUSE_PASSAGE,The bookcase has moved. Follow the secret passage into the great hall.
+OBJECTIVE_TRAIN_DEPART,The locomotive is ready. Board at the green departure control beside the cab.
+HOUSE_TITLE,The house’s memory
+HOUSE_SONG_TITLE,What the walls remember
+HOUSE_SONG_BODY,"Above each little bed a bell doth hang,
+And in each woven hoop a charm is strung:
+A lamp, a crescent moon, a cradle, and a door.
+Wind thou the box: it sings the tune once more,
+And every bell it calls will swing and shine.
+Ring back the five, in order, note by line.
+A faulty note unsings what thou hast done;
+The box will play again for anyone.
+But hush — the chair still rocks, the dolls still stare —
+Who sits so still, and never leaves her chair?"
+HOUSE_REPLAY,The memory box
+HOUSE_REPLAY_INSPECT,Wind the music box. Its five notes belong to the bells above the beds.
+HOUSE_BELL_INSPECT,A brass bell hangs above a woven dreamcatcher. A small charm is tied in the middle of the hoop.
+HOUSE_BELL_WRONG,The last note does not belong. The five studs go dark. The box can play the memory again.
+HOUSE_BELL_STEP,The bell answers. Another memory light holds.
+SOLVED_HOUSE,"The five notes settle into silence. The bookcase slides aside, revealing a narrow passage."
+HINT_HOUSE_1,"Read the record on the upstairs table, then inspect the memory box beside the four bells."
+HINT_HOUSE_2,"Play the box. Five notes sound, and their bells flash in order. The captions name each bell; you can replay without losing accepted input."
+HINT_HOUSE_3,Ring Cradle → Lamp → Door → Moon → Lamp. Then walk through the opening behind the bookcase.
+PROMPT_REPLAY,E  Replay the memory
+PROMPT_RING,E  Ring the bell
+PROMPT_MECHANISM,E  Operate
+PROMPT_BOARD,E  Board and depart
+RAILWAY_TITLE,The last train
+TRAIN_MANUAL_TITLE,The driver’s repair book
+TRAIN_MANUAL_BODY,"The union leaks: shut feed ere bolts are drawn;
+Make fast the joint, then let the feed run on.
+Each furnace mark gives steam two, return one;
+Relief takes one from each till work is done.
+Let steam show THREE, return show ONE to thee;
+Then loose the brake and set the carriage free.
+Beside the cab the green control shall wait;
+Board thou the train, and leave this sleeping gate."
+TRAIN_FEED,Feed isolation wheel
+TRAIN_FEED_INSPECT,The red wheel isolates the leaking pipe. SHUT permits the captive union clamp to be tightened; OPEN restores flow after repair.
+TRAIN_UNION,Leaking union and captive clamp
+TRAIN_UNION_INSPECT,A loose pipe union with its clamp already attached. Isolate the feed before tightening it. No loose tool is needed.
+TRAIN_FIRE,Furnace control
+TRAIN_FIRE_INSPECT,"Four settings, 0–3. With repaired feed open, each setting contributes two steam marks and one return mark. Relief subtracts from both."
+TRAIN_RELIEF,Relief control
+TRAIN_RELIEF_INSPECT,"Four settings, 0–3. Each relief mark subtracts one from both gauges. The engraved targets are steam III and return I."
+TRAIN_BRAKE,Departure brake
+TRAIN_BRAKE_INSPECT,HELD keeps the train at the platform. FREE permits departure when the pipe is repaired and both gauges match their engraved targets.
+TRAIN_BOARD,Cab departure control
+TRAIN_BOARD_INSPECT,"Board the locomotive and leave London when repairs, feed, gauges and brake are ready. Merely reaching the platform does not end the chapter."
+TRAIN_ISOLATE_FIRST,Steam escapes around the union. Shut the red feed wheel before tightening its clamp.
+TRAIN_CONTROL_CHANGED,"The mechanism settles. Check the pipe, the feed and both gauges."
+TRAIN_NEEDS_REPAIR,The train cannot depart with a leaking union. Isolate the feed and tighten its captive clamp.
+TRAIN_NEEDS_FEED,"The union is repaired, but the feed is still shut. Reopen the red wheel."
+TRAIN_NEEDS_PRESSURE,The gauges do not match: steam must read THREE and return ONE.
+TRAIN_NEEDS_BRAKE,"The pressure is ready, but the brake is still held. Release it beside the cab."
+TRAIN_DEPARTING,"The whistle sounds. The wheels catch, and London begins to slide away."
+HINT_RAILWAY_1,Read the driver’s repair book. Follow the leaking pipe to its red isolation wheel and captive clamp.
+HINT_RAILWAY_2,"Repair with the feed shut, then reopen it. Furnace adds (2 steam, 1 return); relief subtracts (1 steam, 1 return). Match the targets (3, 1), then release the brake."
+HINT_RAILWAY_3,"Shut the feed, tighten the union and reopen the feed. Set furnace 2 and relief 1. Set the brake FREE, then use the green departure control beside the cab."
+BELL_LAMP,the bell above the lamp charm
+ECHO_LAMP,The memory plays: Lamp.
+BELL_MOON,the bell above the moon charm
+ECHO_MOON,The memory plays: Moon.
+BELL_CRADLE,the bell above the cradle charm
+ECHO_CRADLE,The memory plays: Cradle.
+BELL_DOOR,the bell above the door charm
+ECHO_DOOR,The memory plays: Door.
+LANDMARK_WATCH,Watch Post
+LANDMARK_YARD,Cooper’s Yard
+LANDMARK_PUB,The Crooked Crown
+LANDMARK_CROSS,Bell Passage
+LANDMARK_GATE,Mourning Gate
+PROMPT_POLICE_PLAN,[E]  Spread out the street plan
+SIGHTING,"You see him stop at %s, and wait there in the dark."
+SHADOW_CLOSE,The lamps die. He is standing right in front of you.
+LANDMARK_CHAPEL,Chapel Steps
+LANDMARK_WELL,Widow’s Well
+LANDMARK_MARKET,Rag Market
+LANDMARK_TANNERY,Tanner’s Row
+MENU_TITLE_SCRIPT,"The Last
+Verse"
+MENU_PLAY,Play
+MENU_SETTINGS,Settings
+MENU_EXIT,Exit
+HINTS,Hints
+HINTS_EYEBROW,Whispered in the Margin
+HINTS_TITLE,Hints for the Riddles
+HINTS_EMPTY,"No riddle hath been found as yet.
+Begin the tale, and the margins will fill."
+STORY_BOOK,The Traveller’s Book
+JOURNAL_HINT_NOTE,Hints are kept on the chapter’s page in the title menu.
+SETTINGS_EYEBROW,MAKE YOURSELF AT HOME
+CONTROLS_TITLE,Controls
+CONTROLS_LIST,"W A S D|Walk
+Mouse|Look about
+E|Use, take, or read
+Right click|Look closer · turn a wheel back
+Q|Throw what thou carriest
+B|The traveller’s book
+J|Journal & belongings
+Esc|Pause"
+WITCH_SCRAP_0_TITLE,the first sister’s scrap
+WITCH_SCRAP_0_INSPECT,"A torn scrap of the spell, held out toward the fire."
+WITCH_SCRAP_0_BODY,"The eye that watched the marsh by night
+Will only open in dim light:
+No flame for it, no roaring glow —
+But embers, dying, soft and low."
+WITCH_SCRAP_1_TITLE,the second sister’s scrap
+WITCH_SCRAP_1_INSPECT,"A torn scrap of the spell, held out toward the fire."
+WITCH_SCRAP_1_BODY,"Cold is the frog, and cold its toe;
+Only a blaze will make it go.
+The bat’s wool burns if fire rage,
+And sulks on embers: give it a middle stage."
+WITCH_SCRAP_2_TITLE,the third sister’s scrap
+WITCH_SCRAP_2_INSPECT,"A torn scrap of the spell, held out toward the fire."
+WITCH_SCRAP_2_BODY,"The dog’s grey tongue hath lapped at hell;
+It knows the hottest fire well.
+Roar up the flames before it fall,
+Or it will not be swallowed at all."
+BELLOWS,the bellows
+BELLOWS_INSPECT,"A pair of old leather bellows, their nozzle pushed into the fire under the cauldron."
+PROMPT_BELLOWS,[E]  Work the bellows
+HEAT_0,The fire sinks to glowing embers.
+HEAT_1,The fire settles into a steady flame.
+HEAT_2,The fire roars up around the cauldron.
+COOP,Play Together
+COOP_EYEBROW,For Two Readers
+COOP_BODY,"One of you hosts the tale and keeps its saved progress; the other joins by address. You walk the same London, see each other, and share every riddle. Only one of you can carry a puzzle piece at a time."
+COOP_HOST,Host a Game
+COOP_JOIN,Join a Game
+COOP_WAITING,Waiting for a companion to join…
+COOP_ADDRESS,Your address: %s   ·   port %d
+COOP_ADDRESS_NOTE,"On the same network, your companion types this address. Over the internet, the host must forward the port."
+COOP_HOST_FAILED,The game could not be hosted. Is another copy already hosting?
+COOP_JOINED,A companion has joined.
+COOP_JOINED_PLAYING,A companion has joined your tale.
+COOP_BEGIN,Begin together
+COOP_JOIN_BODY,Type the address your host sees on their page.
+COOP_CONNECT,Connect
+COOP_CONNECTING,"Knocking at the host’s door… Once connected, wait for them to begin."
+COOP_CONNECTED,Connected. Waiting for the host to begin the tale…
+COOP_FAILED,No one answered at that address.
+COOP_HOST_LEFT,The host has closed the tale. You are back in your own.
+COOP_COMPANION_LEFT,Your companion has left the tale.
+COOP_COMPANION_HOLDS,Your companion is carrying the piece.
+COOP_CANCEL,Cancel

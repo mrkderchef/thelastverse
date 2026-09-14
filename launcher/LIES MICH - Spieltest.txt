@@ -1,0 +1,60 @@
+THE LAST VERSE – Spieltest
+==========================
+
+Danke, dass du testest! Das Spiel ist ein Escape-Room-Abenteuer in Shakespeares London
+(Englisch). Ein Durchlauf dauert grob 1–2 Stunden.
+
+
+STARTEN
+-------
+
+Mac:
+  1. "The Last Verse (Mac).command" per Rechtsklick > "Öffnen" starten
+     (beim ersten Mal fragt macOS nach, weil die Datei aus dem Internet kommt).
+  2. Falls macOS es trotzdem blockiert: Systemeinstellungen > Datenschutz & Sicherheit >
+     ganz unten "Dennoch öffnen".
+  3. Falls "keine Berechtigung" kommt: Terminal öffnen und eingeben
+        chmod +x ~/Downloads/"The Last Verse (Mac).command"
+     (Pfad ggf. anpassen), dann nochmal starten.
+
+Windows:
+  1. "The Last Verse (Windows).bat" doppelklicken.
+  2. Falls Windows "Der Computer wurde durch Windows geschützt" zeigt:
+     "Weitere Informationen" > "Trotzdem ausführen".
+
+Beim ersten Start werden die Spiel-Engine (ca. 70 MB) und das Spiel geladen und vorbereitet
+(1–3 Minuten). Danach startet es in Sekunden. Bei jedem Start holt der Launcher automatisch
+die neueste Version – einfach immer den Launcher benutzen.
+
+Spielstände bleiben bei Updates erhalten.
+
+
+STEUERUNG
+---------
+W A S D laufen · Maus umsehen · E benutzen/nehmen/lesen · Rechtsklick genauer ansehen
+(dreht Räder zurück) · Q Getragenes werfen · B Reisebuch · J Journal · Esc Pause
+Alle Tasten stehen auch unter Settings. Hinweise zu Rätseln: im Titelmenü unter
+Play > Hints.
+
+
+ZU ZWEIT SPIELEN
+----------------
+Play > Play Together.
+  - Einer wählt "Host a Game" und liest seine Adresse vor (z. B. 192.168.0.12).
+  - Der andere wählt "Join a Game", tippt die Adresse ein und verbindet sich.
+  - Der Host klickt "Begin together".
+Im selben WLAN klappt das direkt. Übers Internet muss der Host Port 24613 (UDP) im
+Router freigeben. Der Fortschritt wird beim Host gespeichert.
+
+
+FEEDBACK
+--------
+Am meisten hilft:
+  - Wo hast du festgesteckt, und wie lange?
+  - Welche Rätsel waren zu leicht, zu schwer oder unklar?
+  - Was war gruselig, was eher albern?
+  - Bugs: was hast du gemacht, was ist passiert? Screenshot hilft sehr.
+  - Wie lief das Spiel (ruckelig? welcher Rechner?)
+  - Beim Zusammenspielen: Hat die Verbindung gehalten, war etwas nicht synchron?
+
+Hinweis: Grafik und Sounds sind Platzhalter, die Erzählerstimme ist synthetisch.

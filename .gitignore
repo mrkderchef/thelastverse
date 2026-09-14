@@ -1,0 +1,18 @@
+# Godot cache and generated imports
+.godot/
+*.translation
+
+# Builds and local files
+builds/
+.DS_Store
+*.tmp
+*.log
+
+# Local credentials and signing material
+*.p12
+*.keystore
+*.mobileprovision
+
+# Local neural narration tools and model downloads
+.tools/
+__pycache__/
