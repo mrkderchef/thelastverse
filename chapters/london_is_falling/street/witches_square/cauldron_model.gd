@@ -56,9 +56,18 @@ func build(prop_kit: PropKit, scene: ActScene) -> void:
 		add_child(witch)
 		witch.global_position = spot[0]
 		witch.look_at(Vector3(CENTER.x, witch.global_position.y, CENTER.z), Vector3.UP, true)
-		# Each witch holds a torn scrap of the recipe out toward the fire.
-		var scrap: StudyInteractable = kit.note(ActorKit.hand_of(witch), "witch_scrap_%d" % witch_index, Vector3(0, -0.14, 0.06), Vector2(0.24, 0.18), Vector3(-0.6, 0, 0))
+		# Beside each witch, out of the cauldron's reach, her torn scrap of the recipe is nailed to
+		# a crooked stake and faces anyone walking round the fire.
+		var outward: Vector3 = (spot[0] - CENTER).normalized()
+		var stake := Node3D.new()
+		stake.position = CENTER + outward * 2.25 + outward.cross(Vector3.UP) * 0.55
+		stake.rotation.y = atan2(outward.x, outward.z)
+		add_child(stake)
+		kit.cylinder(stake, 0.05, 1.3, Vector3(0, 0.65, 0), "timber", 0.035).rotation.z = 0.08
+		kit.box(stake, Vector3(0.42, 0.32, 0.04), Vector3(0, 1.18, 0.05), "wood").rotation.x = -0.35
+		var scrap: StudyInteractable = kit.note(stake, "witch_scrap_%d" % witch_index, Vector3(0, 1.19, 0.08), Vector2(0.34, 0.24), Vector3(-0.35, 0, 0))
 		scrap.set_meta("witch", true)
+		kit.sphere(stake, 0.018, Vector3(0, 1.3, 0.1), "iron")
 	# The apothecary stall against the left facade.
 	kit.box(self, Vector3(0.5, 2.1, 2.9), Vector3(-8.75, 1.05, -44.0), "timber", true)
 	for y: float in [0.55, 1.12, 1.75]:

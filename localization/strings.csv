@@ -272,7 +272,7 @@ Shall the brew cast back its fare.
 Feather, root: let them lie there.
 But mark: no pot will take its meat
 Unless the fire burn at its heat.
-Each sister holds, torn from this page,
+Beside each sister, torn from this page,
 The flame each morsel needs. Engage
 The bellows, read what each doth keep,
 And feed the fire, or brew shall weep.
@@ -304,7 +304,7 @@ BRIDGE_TITLE,The Ides of March
 HINT_PROPS_1,Hint 1 / 3 — Read the playbill on the wall beside the prop cart.
 HINT_PROPS_2,"Hint 2 / 3 — Romeo gets the rose, Juliet the letter, Friar Laurence the vial. The skull and the crown stay on the cart."
 HINT_PROPS_3,"Hint 3 / 3 — Pick up a prop from the cart with E, then press E on an actor’s empty hand. When all three hold the right prop, the curtain lifts."
-HINT_BREW_1,Hint 1 / 3 — The torn page on the stall gives the order of the ingredients. Each witch holds a scrap in her hand: read all three.
+HINT_BREW_1,Hint 1 / 3 — The torn page on the stall gives the order of the ingredients. Beside each witch a scrap is nailed to a crooked stake: walk round the cauldron and read all three.
 HINT_BREW_2,Hint 2 / 3 — The scraps say how hot the fire must be for each ingredient. The bellows at the front of the cauldron move the fire from embers to a steady flame to a roaring blaze.
 HINT_BREW_3,"Hint 3 / 3 — Eye of newt on embers, toe of frog on a roaring blaze, wool of bat on a steady flame, tongue of dog on a roaring blaze. The feather and the root stay on the shelf."
 HINT_BRIDGE_1,"Hint 1 / 3 — Read the bridgemaster’s orders on the engine, then the soothsayer’s scroll."
@@ -656,19 +656,19 @@ B|The traveller’s book
 J|Journal & belongings
 Esc|Pause"
 WITCH_SCRAP_0_TITLE,the first sister’s scrap
-WITCH_SCRAP_0_INSPECT,"A torn scrap of the spell, held out toward the fire."
+WITCH_SCRAP_0_INSPECT,"A torn scrap of the spell, nailed to a crooked stake beside a witch."
 WITCH_SCRAP_0_BODY,"The eye that watched the marsh by night
 Will only open in dim light:
 No flame for it, no roaring glow —
 But embers, dying, soft and low."
 WITCH_SCRAP_1_TITLE,the second sister’s scrap
-WITCH_SCRAP_1_INSPECT,"A torn scrap of the spell, held out toward the fire."
+WITCH_SCRAP_1_INSPECT,"A torn scrap of the spell, nailed to a crooked stake beside a witch."
 WITCH_SCRAP_1_BODY,"Cold is the frog, and cold its toe;
 Only a blaze will make it go.
 The bat’s wool burns if fire rage,
 And sulks on embers: give it a middle stage."
 WITCH_SCRAP_2_TITLE,the third sister’s scrap
-WITCH_SCRAP_2_INSPECT,"A torn scrap of the spell, held out toward the fire."
+WITCH_SCRAP_2_INSPECT,"A torn scrap of the spell, nailed to a crooked stake beside a witch."
 WITCH_SCRAP_2_BODY,"The dog’s grey tongue hath lapped at hell;
 It knows the hottest fire well.
 Roar up the flames before it fall,

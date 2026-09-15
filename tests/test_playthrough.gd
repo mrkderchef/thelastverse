@@ -283,7 +283,10 @@ func _run() -> void:
 	_expect(game.state.brew.is_empty() and game.caption.text == TranslationServer.translate("BREW_SPOILED"), "The wrong ingredient is spat back")
 	var bellows: StudyInteractable = game.room.find_interactable("bellows")
 	_expect(await _reach(bellows), "The bellows are reachable")
-	_expect(game.room.find_children("*", "StudyInteractable", true, false).filter(func(node: Node) -> bool: return node.has_meta("witch")).size() == 3, "Each witch holds a readable scrap")
+	var scraps: Array = game.room.find_children("*", "StudyInteractable", true, false).filter(func(node: Node) -> bool: return node.has_meta("witch"))
+	_expect(scraps.size() == 3, "A scrap is staked beside each witch")
+	for scrap: StudyInteractable in scraps:
+		_expect(await _reach(scrap), "The witch's scrap can really be aimed at and read: " + scrap.argument)
 	for step: int in range(StudyState.RECIPE.size()):
 		while game.state.heat != StudyState.RECIPE_HEAT[step]:
 			_use(bellows)
